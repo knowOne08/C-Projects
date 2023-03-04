@@ -1,9 +1,12 @@
 #include<stdio.h>
 #include<math.h>
+#define pf printf
+#define sf scanf
+
 int main(){
     int p;
-    printf("Enter a number: ");
-    scanf("%d", &p);
+    pf("Enter a number: ");
+    sf("%d", &p);
 
     if(p<=1){
         return 0;
@@ -17,11 +20,11 @@ void checkPrime(int p){
     int i;
     for(i=2;i<sqrt(p);i++){
         if(p%i == 0){
-            printf("Not Prime");
+            pf("Not Prime");
             break;
         }
         else{
-            printf("Prime");
+            pf("Prime");
             break;
         }
     }

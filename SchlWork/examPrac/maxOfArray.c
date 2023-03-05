@@ -1,15 +1,43 @@
-#include<stdio.h>
-#include<stdlib.h>
+// 
+
+// to multiply 3x3 matrix
+
+#include <stdio.h>
+#include <stdlib.h>
 
 int main(){
-    int a[5]={1,4,6,339,77},i,max;
+    int a[3][3], b[3][3], C[3][3],k,sum,i,j;
 
-    max = a[0];
-    for(i=0;i<5;i++){
-        if(a[i]>max)
-            max = a[i];
+    printf("Enter Values for a: ");
+    
+    for(i=0;i<3;i++){
+        for(j=0;j<3;j++){
+            scanf("%d",&a[i][j]);
+        }
     }
-    // scanf("");
-    printf("%d",max);
-    return 0;
+    
+    printf("\nEnter Values for b: ");
+    
+    for(i=0;i<3;i++){
+        for(j=0;j<3;j++){
+            scanf("%d",&b[i][j]);
+        }
+    }
+    
+    for(i=0;i<3;i++){
+        for(j=0;j<3;j++){
+            sum =0;
+            for(k=0;k<3;k++){
+                sum += (a[i][k]*b[k][j]);
+            }
+            C[i][j] = sum;
+        }
+    }
+    for(i=0;i<3;i++){
+        for(j=0;j<3;j++){
+            printf("%d ",C[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;                                      
 }

@@ -1,6 +1,3 @@
-// to sort an array using bubble sort algorithm using pointer variables.
-// Created: 2013.10.15
-// Last modified: 2013.10.15
 
 #include <stdio.h>
 #include <stdlib.h>

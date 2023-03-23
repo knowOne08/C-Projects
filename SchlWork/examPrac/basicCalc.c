@@ -23,7 +23,7 @@ int main(){
             ans = mult(a,b); 
             break;
         default:
-            printf("Invalid Choice")
+            printf("Invalid Choice");
     }
     
     printf("Answer is %f",ans);

@@ -1,58 +1,21 @@
-#include <stdio.h>
- 
+#include<stdio.h>
 
-int main()
-{
+int main() {
+    int i, j, rows, count=0;
 
-    int i, space, n = 5, j = 0;
- 
+    printf("Enter the number of rows\n");
+    scanf("%d", &rows);
 
-    // first for loop is used to
-
-    // iterate number of rows
-
-    for (i = 0; i < n - 1; i++) {
- 
-
-        // second for loop is used to print spaces
-
-        for (space = 1; space < n - i; space++) {
-
-            printf(" ");
-
-        }
-
-        // third for loop is used
-
-        // to print the required
-
-        // pattern
-
-        for (j = 0; j <= 2 * i; j++) {
-
-            if (j == 0 || j == 2 * i)
-
-                printf("*");
-
+    for (i = 0; i < 2*rows; i=i+2) {
+        for (j = 0; j <= i; j++) {
+            printf("%c", 'A'+count);
+            if(j < i/2)
+                count++;
             else
-
-                printf(" ");
-
+                count--;
         }
-
-        // print the new line after every row
-
+        count = 0;
         printf("\n");
-
     }
-
-    // used to print last row
-
-    for (i = 0; i < 2 * n - 1; i++) {
-
-        printf("*");
-
-    }
-
-    return 0;
+    return(0);
 }

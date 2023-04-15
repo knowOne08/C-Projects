@@ -1,21 +1,25 @@
-#include<stdio.h>
-
-int main() {
-    int i, j, rows, count=0;
-
-    printf("Enter the number of rows\n");
-    scanf("%d", &rows);
-
-    for (i = 0; i < 2*rows; i=i+2) {
-        for (j = 0; j <= i; j++) {
-            printf("%c", 'A'+count);
-            if(j < i/2)
-                count++;
-            else
-                count--;
-        }
-        count = 0;
-        printf("\n");
-    }
-    return(0);
-}
+#include <stdio.h>  
+#include <conio.h>  
+void main()  
+{  
+    int num, i, j, m = 1; // declare local variables  
+    printf (" Enter the number to define the columns: \n");  
+    scanf ("%d", & num);  
+    for (i = 1; i <= num; i++)  
+    {  
+        for (j = 1; j <= i; j++)  
+        {  
+            printf( "* ");  
+        }  
+        printf("\n");  
+    }  
+    for (i = num-1; i >= 1; i--)  
+    {  
+        for (j = 1; j <= i; j++)  
+        {  
+            printf ("* ");  
+        }  
+        printf("\n");  
+    }  
+    getch();  
+}  
